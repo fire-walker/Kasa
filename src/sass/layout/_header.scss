@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1240px;
+  margin: 40px auto;
+  font-size: 24px;
+
+    &__logo {
+      width: 210px;
+      height: 68px;
+    }
+
+    &__menu {
+      margin-left: 50px;
+      color: #FF6060;
+      text-decoration: none;
+    }
+}

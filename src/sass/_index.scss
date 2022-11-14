@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+// 1. Base stuff
+@use './base';
+
+// 2. Layout-related sections
+@use './layout';
+
+// 3. Components
+@use './components';
+
+// 4. Page-specific styles
+@use './pages';
