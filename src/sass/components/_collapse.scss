@@ -1,0 +1,32 @@
+.cards {
+  align-items: center;
+  margin: 30px auto;
+  width: 1023px;
+
+  &__container {
+    margin-bottom: 130px;
+    font-size: 24px;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FF6060;
+    height: 47px;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+
+    &__icon {
+      font-size: 30px;
+      margin-right: 10px;
+    }
+  }
+
+  &__description {
+    color: #FF6060;
+    font-weight: 400;
+    background-color: #F6F6F6;
+    padding: 25px 10px 10px 10px;
+  }
+}

@@ -2,8 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1240px;
-  margin: 40px auto;
+  margin: 40px 100px;
   font-size: 24px;
 
     &__logo {
@@ -15,5 +14,13 @@
       margin-left: 50px;
       color: #FF6060;
       text-decoration: none;
+
+      &:active {
+        text-decoration: #FF6060 underline;
+      }
+
+      &:hover {
+        text-decoration: #FF6060 underline;
+      }
     }
 }
