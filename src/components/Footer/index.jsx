@@ -1,6 +1,5 @@
 import logo_white from '../../assets/logo_white.png'
 
-
 function Footer () {
     return (
         <footer className='footer'>
