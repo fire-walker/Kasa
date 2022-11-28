@@ -1,13 +1,16 @@
 @charset "UTF-8";
 
-// 1. Base stuff
+// 1. Vendors
+@use './vendors';
+
+// 2. Base stuff
 @use './base';
 
-// 2. Layout-related sections
+// 3. Layout-related sections
 @use './layout';
 
-// 3. Components
+// 4. Components
 @use './components';
 
-// 4. Page-specific styles
+// 5. Page-specific styles
 @use './pages';

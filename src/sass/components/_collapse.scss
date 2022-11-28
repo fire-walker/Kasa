@@ -11,25 +11,24 @@
   &__label {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #FF6060;
     height: 47px;
     color: white;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
+    font-weight: 500;
   }
 
   &__description {
     color: #FF6060;
-    font-weight: 400;
     background-color: #F6F6F6;
-    padding: 25px 10px 10px 10px;
+    padding: 30px 25px 20px 20px;
   }
-}
 
-button {
-  background-color: #FF6060;
-  border: none;
-  font-size: 20px;
-  margin-right: 10px;
-  color: white;
+  &__icon {
+    font-size: 35px;
+    margin-top: 10px;
+    color: white;
+  }
 }
