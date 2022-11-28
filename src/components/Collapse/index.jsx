@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa"
+import { HiOutlineChevronDown, HiOutlineChevronUp } from "react-icons/hi"
 
 export default function Collapse ({label, description}) {
     const [isOpen, setIsOpen] = useState(false)
@@ -9,9 +9,9 @@ export default function Collapse ({label, description}) {
             <div className="cards__label">
                 <div>{label}</div>
                 {!isOpen ?
-                    (<button onClick={ () => setIsOpen(true)}><FaChevronDown /></button>)
+                    (<div className="cards__icon" onClick={() => setIsOpen(true)}><HiOutlineChevronDown /></div>)
                     :
-                    (<button onClick={ () => setIsOpen(false)}><FaChevronUp /></button>)}
+                    (<div className="cards__icon" onClick={() => setIsOpen(false)}><HiOutlineChevronUp /></div>)}
             </div>
             {isOpen &&
                 <div className="cards__description">{description}</div>}
