@@ -1,27 +1,44 @@
+@use "../abstracts/mixins" as *;
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 40px 100px;
+  margin: 40px 70px;
   font-size: 24px;
+
+  @include mobile-only {
+    margin: 20px 10px;
+    font-size: 12px;
+  }
 
     &__logo {
       width: 210px;
       height: 68px;
-    }
+      margin: 0;
 
-    &__menu {
-      margin-left: 50px;
-      font-weight: 500;
-      color: #FF6060;
-      text-decoration: none;
-
-      &:active {
-        text-decoration: #FF6060 underline;
-      }
-
-      &:hover {
-        text-decoration: #FF6060 underline;
+      @include mobile-only {
+        width: 145px;
+        height: 47px;
       }
     }
+
+  a {
+    margin-left: 35px;
+    margin-right: 30px;
+    font-weight: 500;
+    color: #FF6060;
+    text-decoration: none;
+
+    @include mobile-only {
+      margin-left: 10px;
+      margin-right: 10px;
+      text-transform: uppercase;
+    }
+
+  }
+
+  .active {
+    text-decoration: underline;
+  }
 }
