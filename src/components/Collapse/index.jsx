@@ -6,13 +6,15 @@ export default function Collapse ({label, description}) {
 
     return (
         <div className="cards">
-            <div className="cards__label">
-                <div>{label}</div>
                 {!isOpen ?
-                    (<div className="cards__icon" onClick={() => setIsOpen(true)}><HiOutlineChevronDown /></div>)
+                    <div className="cards__label" onClick={ () => setIsOpen(true)}>{label}
+                        <div className="cards__icon"><HiOutlineChevronDown /></div>
+                    </div>
                     :
-                    (<div className="cards__icon" onClick={() => setIsOpen(false)}><HiOutlineChevronUp /></div>)}
-            </div>
+                    <div className="cards__label" onClick={ () => setIsOpen(false)}>{label}
+                        <div className="cards__icon"><HiOutlineChevronUp /></div>
+                    </div>}
+
             {isOpen &&
                 <div className="cards__description">{description}</div>}
         </div>
