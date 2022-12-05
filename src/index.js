@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home, { loader as HomeLoader } from "./pages/Home";
 import Accommodation, { loader as AccommodationLoader } from "./pages/Accommodations/Accommodation";
-import AboutUs from "./pages/AboutUs";
+import About from "./pages/About";
 import Error from "./components/Error";
 
 import "../src/sass/_index.scss";
@@ -21,8 +21,8 @@ const router = createBrowserRouter([
         loader: AccommodationLoader
     },
     {
-        path: "/aboutus",
-        element: <AboutUs />,
+        path: "/about",
+        element: <About />,
     },
     {
         path: "*",
@@ -30,5 +30,8 @@ const router = createBrowserRouter([
     },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root"))
-    .render(<RouterProvider router={router} />);
+ReactDOM.createRoot(document.getElementById("root")).render(
+    <React.StrictMode>
+        <RouterProvider router={router} />
+    </React.StrictMode>
+);

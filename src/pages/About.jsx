@@ -27,7 +27,7 @@ const cardDatas =[
     },
 ]
 
-export default function AboutUs() {
+export default function About() {
     return (
         <div>
             <Header />
