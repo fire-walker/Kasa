@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { HiOutlineChevronDown, HiOutlineChevronUp } from "react-icons/hi"
+import { IoChevronDownSharp, IoChevronUpSharp } from "react-icons/io5"
 
 export default function Collapse ({label, description}) {
     const [isOpen, setIsOpen] = useState(false)
@@ -8,11 +8,11 @@ export default function Collapse ({label, description}) {
         <div className="cards">
                 {!isOpen ?
                     <div className="cards__label" onClick={ () => setIsOpen(true)}>{label}
-                        <div className="cards__icon"><HiOutlineChevronDown /></div>
+                        <div className="cards__icon"><IoChevronDownSharp /></div>
                     </div>
                     :
                     <div className="cards__label" onClick={ () => setIsOpen(false)}>{label}
-                        <div className="cards__icon"><HiOutlineChevronUp /></div>
+                        <div className="cards__icon"><IoChevronUpSharp /></div>
                     </div>}
 
             {isOpen &&
