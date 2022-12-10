@@ -31,7 +31,9 @@ export default function About() {
     return (
         <div>
             <Header />
+            <div className="banner__about">
             <Banner picture={banner} alt={"Photo d'une chaîne de montagnes"} />
+            </div>
             <div className="cards__container">
                 {cardDatas.map((card) => (
                     <Collapse
@@ -40,7 +42,7 @@ export default function About() {
                         description={card.description}
                     />
                 ))}
-            </div>
+                    </div>
             <Footer />
         </div>
     )

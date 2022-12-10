@@ -19,7 +19,9 @@ export default function Home() {
     return (
         <div>
             <Header />
-            <Banner picture={banner} altText={"Photo d'une côte maritime"} text={"Chez vous, partout et ailleurs"} />
+            <div className="banner__home">
+            <Banner className picture={banner} altText={"Photo d'une côte maritime"} text={"Chez vous, partout et ailleurs"} />
+            </div>
             <div className="accommodation__cards">
                 {accommodations.map((accommodation) => (
                     <Card accommodation={accommodation} key={accommodation.id} />
