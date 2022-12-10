@@ -4,7 +4,7 @@
   background-color: #F6F6F6;
   border-radius: 25px;
   margin: 40px 100px;
-  padding: 50px;
+  padding: 60px 50px;
   display: flex;
   flex-wrap: wrap;
   gap: 60px;
@@ -16,6 +16,12 @@
     margin: 20px;
     padding: 0;
     gap: 20px;
+  }
+
+  @include tablet-only {
+    padding: 30px 26px;
+    gap: 30px;
+    margin: 30px 80px;
   }
 }
 
@@ -29,6 +35,11 @@
   @include mobile-only {
     width: 335px;
     height: 255px;
+  }
+
+  @include tablet-only {
+    width: 335px;
+    height: 335px;
   }
 
   &::after {

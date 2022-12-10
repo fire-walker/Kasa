@@ -1,10 +1,14 @@
 @use "../abstracts/mixins" as *;
 
 .accommodation {
-  margin: 40px 100px;
+  margin: 20px 100px;
 
   @include mobile-only {
     margin: 20px;
+  }
+
+  @include tablet-only {
+    margin: 20px 80px;
   }
 
   &__container {
@@ -16,22 +20,32 @@
       flex-direction: column;
       align-items: inherit;
     }
+
+    @include tablet-only {
+      align-items: end;
+    }
   }
 
   &__title {
     font-size: 36px;
     color: #FF6060;
     font-weight: 500;
-    margin: 10px 0;
+    margin: 25px 0 0 0;
 
     @include mobile-only {
       font-size: 18px;
+    }
+
+    @include tablet-only {
+      margin-top: 20px;
+      font-size: 30px;
     }
   }
 
   &__location {
     color: #FF6060;
     font-size: 18px;
+    margin-top: 10px;
 
     @include mobile-only {
       font-size: 14px;
@@ -42,7 +56,7 @@
     display: flex;
     list-style-type: none;
     padding: 0;
-    gap: 15px;
+    gap: 10px;
     margin-top: 25px;
     margin-bottom: 0;
 
@@ -60,7 +74,7 @@
       @include mobile-only {
         font-size: 10px;
         border-radius: 5px;
-        padding: 5px 15px;
+        padding: 3px 15px;
       }
     }
   }
@@ -68,7 +82,8 @@
   &__host {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+    align-items: end;
 
     @include mobile-only {
       margin-top: 10px;
@@ -79,7 +94,7 @@
 
     &__informations {
       display: flex;
-      gap: 20px;
+      gap: 15px;
 
       @include mobile-only {
         gap: 10px;
@@ -109,18 +124,23 @@
 
   &__collapse {
     display: flex;
-    gap: 100px;
-    align-items: baseline;
+    gap: 70px;
+    font-size: 18px;
+    list-style-type: none;
+    margin-top: 25px;
 
     @include mobile-only {
       flex-direction: column;
-      gap: 0;
+      gap: 20px;
+      font-size: 12px;
+      margin-top: 10px;
     }
 
     &__collapse {
       font-size: 18px;
-      width: 582px;
       list-style-type: none;
+      flex: 1;
+      display: flex;
 
       @include mobile-only {
         width: 335px;
@@ -131,10 +151,18 @@
 }
 
 .ratings {
-  font-size: 50px;
+  font-size: 35px;
 
   @include mobile-only {
-    font-size: 20px;
+    font-size: 15px;
   }
+
+  @include tablet-only {
+    font-size: 25px;
+  }
+}
+
+.cards {
+  margin-top: 0;
 }
 
