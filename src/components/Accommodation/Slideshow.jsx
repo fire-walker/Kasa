@@ -1,31 +1,40 @@
 import React, { useState } from "react";
-import { HiOutlineChevronRight, HiOutlineChevronLeft } from "react-icons/hi";
+import { IoChevronBackSharp, IoChevronForwardSharp } from "react-icons/io5";
+import useImagePreloader from "../../hooks/imgPreload";
 
 const Slider = ({ slides }) => {
-    const [current, setCurrent] = useState(0);
+    const [sliderPosition, setSliderPosition] = useState(0);
     const length = slides.length;
+    const maxlength = length - 1;
+
+    // Permet un chargement fluide des images du caroussel
+    useImagePreloader(slides);
 
     const nextSlide = () => {
-        setCurrent(current === length - 1 ? 0 : current + 1);
+        setSliderPosition(sliderPosition === maxlength ? 0 : sliderPosition + 1);
     };
 
     const prevSlide = () => {
-        setCurrent(current === 0 ? length - 1 : current - 1);
+        setSliderPosition(sliderPosition === 0 ? maxlength : sliderPosition - 1);
     };
 
     return (
         <div className="slideshow">
 
-            <HiOutlineChevronLeft className="left-arrow arrow" onClick={prevSlide}/>
-            <HiOutlineChevronRight className="right-arrow arrow" onClick={nextSlide}/>
+            {length !== 1 &&
+            <div>
+                <IoChevronBackSharp className="left-arrow arrow" onClick={prevSlide}/>
+                <IoChevronForwardSharp className="right-arrow arrow" onClick={nextSlide}/>
+                <div className="slideshow__bulletpoint">
+                    {sliderPosition + 1}/{slides.length}
+                </div>
+            </div>
+            }
 
             {slides.map((slide, index) => {
                 return (
                     <div className="slideshow__images" key={index}>
-                        {index === current && (<img src={slide} alt="Logement" />)}
-                        <div className="slideshow__bulletpoint">
-                            <p>{current + 1}/{slides.length}</p>
-                        </div>
+                        {index === sliderPosition && (<img src={slide} alt="Logement" />)}
                     </div>
                 );
             })}

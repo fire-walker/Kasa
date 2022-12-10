@@ -1,5 +1,5 @@
 import React from "react";
-import { HiStar } from "react-icons/hi";
+import { IoStarSharp } from "react-icons/io5";
 
 export default function Rating({rate}) {
     const totalStars = 5;
@@ -8,9 +8,9 @@ export default function Rating({rate}) {
         <div>
             {[...new Array(totalStars)].map((star, index) => {
                 return index < rate ?
-                    <HiStar className="fullstar"/>
+                    <IoStarSharp key={index} className="star fullstar" />
                     :
-                    <HiStar className="emptystar" />;
+                    <IoStarSharp key={index} className="star emptystar" />;
             })}
         </div>
     );
