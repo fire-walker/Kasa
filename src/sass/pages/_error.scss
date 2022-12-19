@@ -1,7 +1,8 @@
 @use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
 
 .error__container {
-  color: #FF6060;
+  color: $color-primary;
   margin-bottom: 185px;
   text-align: center;
 
@@ -38,7 +39,7 @@
   a {
     font-weight: 500;
     font-size: 18px;
-    color: #FF6060;
+    color: $color-primary;
 
     @include mobile-only {
       font-size: 14px;

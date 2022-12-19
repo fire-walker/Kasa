@@ -1,4 +1,5 @@
 @use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
 
 .star {
   margin-left: 7px;
@@ -14,9 +15,9 @@
 }
 
 .fullstar {
-  color: #FF6060;
+  color: $color-primary;
 }
 
 .emptystar {
-  color: #E5E5E5;
+  color: $color-tertiary;
 }
