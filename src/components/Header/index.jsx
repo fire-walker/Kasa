@@ -1,7 +1,7 @@
 import {Link, NavLink} from 'react-router-dom';
 import logo from '../../assets/logo.png';
 
-function Header() {
+export default function Header() {
     return (
         <header className='header'>
             <Link to="/"><img src={logo} alt="logo" className='header__logo'/></Link>
@@ -12,5 +12,3 @@ function Header() {
         </header>
     )
 }
-
-export default Header
