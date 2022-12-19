@@ -4,7 +4,7 @@ import Banner from "../components/Banner";
 import banner from "../assets/banner_about_us.jpg";
 import Collapse from "../components/Collapse";
 
-const cardDatas =[
+const collapseData =[
     {
         id: 1,
         label: "Fiabilité",
@@ -35,11 +35,11 @@ export default function About() {
             <Banner picture={banner} alt={"Photo d'une chaîne de montagnes"} />
             </div>
             <div className="cards__container">
-                {cardDatas.map((card) => (
+                {collapseData.map((collapse) => (
                     <Collapse
-                        key={card.id}
-                        label={card.label}
-                        description={card.description}
+                        key={collapse.id}
+                        label={collapse.label}
+                        description={collapse.description}
                     />
                 ))}
                     </div>

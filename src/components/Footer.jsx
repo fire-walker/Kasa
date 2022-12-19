@@ -1,4 +1,4 @@
-import logo_white from '../../assets/logo_white.png'
+import logo_white from '../assets/logo_white.png'
 
 export default function Footer () {
     return (

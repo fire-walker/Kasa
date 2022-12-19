@@ -7,9 +7,8 @@ import Rating from "../../components/Accommodation/Ratings";
 import Footer from "../../components/Footer";
 import Collapse from "../../components/Collapse";
 
-export async function loader (params) {
-    const id = params.params.accommodationId;
-    return await getAccommodation(id);
+export async function loader ({ params }) {
+    return await getAccommodation(params.accommodationId);
 }
 
 export default function Accommodation() {
