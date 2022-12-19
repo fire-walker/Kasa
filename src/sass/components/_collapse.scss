@@ -10,16 +10,32 @@
     .collapse__label {
       border-radius: 10px;
       font-size: 18px;
+
+      @include mobile-only {
+        border-radius: 5px;
+        font-size: 13px;
+      }
     }
 
     .collapse__icon {
       position: relative;
       left: 15px;
+
+      @include mobile-only {
+        left: 0;
+      }
     }
 
     .collapse__description {
       border-radius: 10px;
       font-size: 18px;
+      padding: 30px 15px 30px 20px;
+
+      @include mobile-only {
+        font-size: 12px;
+        padding: 20px 15px 5px 15px;
+        border-radius: 5px;
+      }
     }
   }
 
@@ -54,9 +70,10 @@
   &__description {
     background-color: #F6F6F6;
     color: #FF6060;
-    padding: 30px 25px 20px 20px;
+    padding: 30px 25px 15px 25px;
     flex : 1;
     font-size: 24px;
+    border-radius: 5px;
   }
 
   &__icon {

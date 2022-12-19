@@ -558,13 +558,32 @@ template {
   border-radius: 10px;
   font-size: 18px;
 }
+@media screen and (min-width: 375px) and (max-width: 912px) {
+  .collapse.acc .collapse__label {
+    border-radius: 5px;
+    font-size: 13px;
+  }
+}
 .collapse.acc .collapse__icon {
   position: relative;
   left: 15px;
 }
+@media screen and (min-width: 375px) and (max-width: 912px) {
+  .collapse.acc .collapse__icon {
+    left: 0;
+  }
+}
 .collapse.acc .collapse__description {
   border-radius: 10px;
   font-size: 18px;
+  padding: 30px 15px 30px 20px;
+}
+@media screen and (min-width: 375px) and (max-width: 912px) {
+  .collapse.acc .collapse__description {
+    font-size: 12px;
+    padding: 20px 15px 5px 15px;
+    border-radius: 5px;
+  }
 }
 .collapse__container {
   margin-bottom: 130px;
@@ -597,9 +616,10 @@ template {
 .collapse__description {
   background-color: #F6F6F6;
   color: #FF6060;
-  padding: 30px 25px 20px 20px;
+  padding: 30px 25px 15px 25px;
   flex: 1;
   font-size: 24px;
+  border-radius: 5px;
 }
 .collapse__icon {
   font-size: 35px;
