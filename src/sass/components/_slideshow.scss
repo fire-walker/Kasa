@@ -33,6 +33,7 @@
     color: white;
     font-size: 18px;
     bottom: 35px;
+    z-index: 100;
 
     @include mobile-only {
       left: 150px;
@@ -59,6 +60,7 @@
   top: 150px;
   font-size: 100px;
   color: white;
+  z-index: 100;
 
   @include mobile-only {
     font-size: 30px;

@@ -319,7 +319,7 @@ template {
   margin: 60px 100px 0;
   height: 223px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .banner__home {
     height: 111px;
     margin: 20px;
@@ -334,7 +334,7 @@ template {
 .banner__home img {
   border-radius: 25px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .banner__home img {
     height: 111px;
     border-radius: 10px;
@@ -352,7 +352,7 @@ template {
   margin: 40px 100px 0;
   height: 223px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .banner__about {
     margin: 20px;
   }
@@ -365,7 +365,7 @@ template {
 .banner__about img {
   border-radius: 25px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .banner__about img {
     border-radius: 10px;
     height: 223px;
@@ -391,7 +391,7 @@ template {
   color: white;
   font-size: 48px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .banner__text {
     left: 15px;
     bottom: 5px;
@@ -413,7 +413,7 @@ template {
   margin: 40px 70px 0;
   font-size: 24px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .header {
     margin: 20px 10px;
     font-size: 12px;
@@ -429,7 +429,7 @@ template {
   height: 68px;
   margin: 0;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .header__logo {
     width: 145px;
     height: 47px;
@@ -442,7 +442,7 @@ template {
   color: #FF6060;
   text-decoration: none;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .header a {
     margin-left: 10px;
     margin-right: 10px;
@@ -467,7 +467,7 @@ template {
   color: white;
   font-size: 24px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .footer__copyright {
     font-size: 12px;
     padding-bottom: 40px;
@@ -483,7 +483,7 @@ template {
   flex-wrap: wrap;
   gap: 60px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .accommodation__cards {
     background-color: white;
     border-radius: 0;
@@ -508,9 +508,9 @@ template {
   overflow: hidden;
   position: relative;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .card {
-    width: 335px;
+    width: 100%;
     height: 255px;
   }
 }
@@ -533,6 +533,13 @@ template {
 .card__image {
   height: 100%;
 }
+@media screen and (min-width: 375px) and (max-width: 912px) {
+  .card__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
 .card__title {
   position: absolute;
   z-index: 2;
@@ -541,22 +548,34 @@ template {
   color: white;
 }
 
-.cards {
+.collapse {
   border-radius: 5px;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-.cards__container {
+.collapse.acc .collapse__label {
+  border-radius: 10px;
+  font-size: 18px;
+}
+.collapse.acc .collapse__icon {
+  position: relative;
+  left: 15px;
+}
+.collapse.acc .collapse__description {
+  border-radius: 10px;
+  font-size: 18px;
+}
+.collapse__container {
   margin-bottom: 130px;
   font-size: 24px;
 }
-@media screen and (max-width: 375px) {
-  .cards__container {
+@media screen and (min-width: 375px) and (max-width: 912px) {
+  .collapse__container {
     font-size: 13px;
   }
 }
-.cards__label {
+.collapse__label {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -566,26 +585,29 @@ template {
   padding: 20px;
   border-radius: 5px;
   font-weight: 500;
+  cursor: pointer;
+  font-size: 24px;
 }
-@media screen and (max-width: 375px) {
-  .cards__label {
+@media screen and (min-width: 375px) and (max-width: 912px) {
+  .collapse__label {
     height: 30px;
     padding: 10px 5px 10px 10px;
   }
 }
-.cards__description {
+.collapse__description {
   background-color: #F6F6F6;
   color: #FF6060;
   padding: 30px 25px 20px 20px;
   flex: 1;
+  font-size: 24px;
 }
-.cards__icon {
+.collapse__icon {
   font-size: 35px;
   margin-top: 10px;
   color: white;
 }
-@media screen and (max-width: 375px) {
-  .cards__icon {
+@media screen and (min-width: 375px) and (max-width: 912px) {
+  .collapse__icon {
     font-size: 20px;
     margin-top: 5px;
   }
@@ -594,7 +616,7 @@ template {
 .slideshow {
   position: relative;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .slideshow {
     height: 255px;
     margin: 10px auto;
@@ -609,7 +631,7 @@ template {
   animation: loading-image 500ms ease-in;
   transition: 100ms;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .slideshow img {
     height: 255px;
     border-radius: 10px;
@@ -621,8 +643,9 @@ template {
   color: white;
   font-size: 18px;
   bottom: 35px;
+  z-index: 100;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .slideshow__bulletpoint {
     left: 150px;
     display: none;
@@ -648,8 +671,9 @@ template {
   top: 150px;
   font-size: 100px;
   color: white;
+  z-index: 100;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .arrow {
     font-size: 30px;
     top: 110px;
@@ -676,7 +700,7 @@ template {
 .star {
   margin-left: 7px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .star {
     margin-right: 5px;
     margin-left: 0;
@@ -706,10 +730,15 @@ template {
   font-size: 288px;
   margin: 100px 0 0 0;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .error__container h1 {
     font-size: 96px;
     margin-top: 200px;
+  }
+}
+@media screen and (min-width: 912px) and (max-width: 1339px) {
+  .error__container h1 {
+    font-size: 150px;
   }
 }
 .error__container p {
@@ -717,10 +746,15 @@ template {
   font-size: 36px;
   padding-bottom: 120px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .error__container p {
     font-size: 18px;
     margin: 15px 30px;
+  }
+}
+@media screen and (min-width: 912px) and (max-width: 1339px) {
+  .error__container p {
+    font-size: 25px;
   }
 }
 .error__container a {
@@ -728,7 +762,7 @@ template {
   font-size: 18px;
   color: #FF6060;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .error__container a {
     font-size: 14px;
   }
@@ -737,7 +771,7 @@ template {
 .accommodation {
   margin: 20px 100px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .accommodation {
     margin: 20px;
   }
@@ -752,7 +786,7 @@ template {
   justify-content: space-between;
   align-items: baseline;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .accommodation__container {
     flex-direction: column;
     align-items: inherit;
@@ -769,7 +803,7 @@ template {
   font-weight: 500;
   margin: 25px 0 0 0;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .accommodation__title {
     font-size: 18px;
   }
@@ -785,7 +819,7 @@ template {
   font-size: 18px;
   margin-top: 10px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .accommodation__location {
     font-size: 14px;
   }
@@ -798,7 +832,7 @@ template {
   margin-top: 25px;
   margin-bottom: 0;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .accommodation__tags {
     margin-top: 10px;
   }
@@ -810,7 +844,7 @@ template {
   font-size: 14px;
   padding: 5px 30px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .accommodation__tags li {
     font-size: 10px;
     border-radius: 5px;
@@ -823,7 +857,7 @@ template {
   gap: 15px;
   align-items: end;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .accommodation__host {
     margin-top: 10px;
     flex-direction: row-reverse;
@@ -835,7 +869,7 @@ template {
   display: flex;
   gap: 15px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .accommodation__host__informations {
     gap: 10px;
   }
@@ -844,7 +878,7 @@ template {
   color: #FF6060;
   font-size: 18px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .accommodation__host__name {
     font-size: 12px;
   }
@@ -854,7 +888,7 @@ template {
   width: 64px;
   height: 64px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .accommodation__host__picture img {
     width: 32px;
     height: 32px;
@@ -867,7 +901,7 @@ template {
   list-style-type: none;
   margin-top: 25px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .accommodation__collapse {
     flex-direction: column;
     gap: 20px;
@@ -881,7 +915,7 @@ template {
   flex: 1;
   display: flex;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .accommodation__collapse__collapse {
     width: 335px;
     font-size: 12px;
@@ -891,7 +925,7 @@ template {
 .ratings {
   font-size: 35px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .ratings {
     font-size: 15px;
   }
@@ -912,7 +946,7 @@ template {
   flex-direction: column;
   gap: 30px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 912px) {
   .cards__container {
     margin: 20px 20px 130px 20px;
     gap: 20px;
