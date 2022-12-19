@@ -55,6 +55,7 @@ export default function Accommodation() {
                             key={accommodation.id}
                             label={"Description"}
                             description={accommodation.description}
+                            className = {`acc`}
                         />
                     </div>
 
@@ -66,6 +67,7 @@ export default function Accommodation() {
                             description={accommodation.equipments.map((equipment, index)=>(
                                 <li key={index}>{equipment}</li>
                             ))}
+                            className = {`acc`}
                         /></div>
                 </div>
 
