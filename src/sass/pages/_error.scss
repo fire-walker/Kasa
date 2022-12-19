@@ -14,6 +14,10 @@
       font-size: 96px;
       margin-top: 200px;
     }
+
+    @include tablet-only {
+      font-size: 150px;
+    }
   }
 
   p {
@@ -24,6 +28,10 @@
     @include mobile-only {
       font-size: 18px;
       margin: 15px 30px;
+    }
+
+    @include tablet-only {
+      font-size: 25px;
     }
   }
 
