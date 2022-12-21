@@ -1,4 +1,5 @@
 import {useLoaderData, Navigate} from "react-router-dom";
+
 import { getAccommodation } from "./controller";
 
 import Header from "../../components/Header";

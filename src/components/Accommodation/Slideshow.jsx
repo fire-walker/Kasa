@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import { IoChevronBackSharp, IoChevronForwardSharp } from "react-icons/io5";
-import useImagePreloader from "../../hooks/imgPreload";
 
 const Slider = ({ slides }) => {
     const [sliderPosition, setSliderPosition] = useState(0);
     const length = slides.length;
     const maxlength = length - 1;
-
-    // Permet un chargement fluide des images du caroussel
-    useImagePreloader(slides);
 
     const nextSlide = () => {
         setSliderPosition(sliderPosition === maxlength ? 0 : sliderPosition + 1);
